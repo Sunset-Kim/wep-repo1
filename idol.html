@@ -1,30 +1,50 @@
 <!doctype>
 <html>
 <head>
+   
     <style>
+        @import url(icons/css/fontello.css);
+        @import url(icons/css/animation.css);
         *{
             box-sizing: border-box;
             }
         
         
-        #bar{
-            display: flex;
+        div#bar{
             background-color: black;
             align-items: center;
-            height: 38px;
+            width:97.6%;
+            height: auto;
+            position: fixed;
+            z-index: 2;
                   }
-        #bar-right{
+        div#bar-container{
           color:white;
           display: flex;
-         margin-left: auto;
+        justify-content: center;
+        
+         
         }
-        .baritems{
+        div.baritems{
+            margin: 10;
+        }
+        div.baritems a{
+            font-family: sans-serif;
+            font-weight: bold;
             color: white;
-            font-size: 15px;
-            text-align:center;
-            margin: 10px;
-            margin-right: 15px;
+            font-size: 1rem;
+            margin: 5px;
+            text-decoration:none;
+            
+            transition:all 0.3s ease-in-out
+            
           }
+        div.baritems a:hover{
+            color:orange;
+            filter: blur(1px);
+            transition:all 0.3s ease-in-out;
+        }
+        
         section{
             max-width: 600px;
             margin:0 auto;
@@ -113,51 +133,50 @@
         
             filter:blur(2px);
         }
-            
-       
-        
-        
-        
         
         footer{
           background-color:black;
-          margin-top:50px;
-            width: 100%;
         }
-
-        #footer1{
-        color: lightgray;
-        display: flex;
-        
+        #icon-container{
+            display: flex;
+            justify-content: center;
         }
-        #footericon{
-          display: flex;
-            margin: 0 auto;
+        #icon-container a{
+            font-size: 25px;
+            margin-top:15px;
+            
+           
         }
-        .icon{
-          border: lightgray 2px solid;
-         margin-right: 10px;
-         margin-top: 10px;
-          font-size: 1rem;
-
-
-        }
-        #footer2{
-          text-align: center;
-          color: white;
+        #icon-container i{
+            color: white;
+            transition: all .8s ease-out;
         }
         
+        #icon-container i:hover{
+            color: orange; 
+            transition: all .8s ease-in-out;
+        }
+        #copyleft{
+            text-align: center;
+            font-family: arial;
+            font-size: 1rem;
+            font-weight: bold;
+            color:white;
+            padding: 15px;
+            letter-spacing: 1.5px;
+        }
+
     </style>
 
 </head>
 <body>
     <header>
         <div id="bar">
-            <div id="bar-right">
-               <div class="baritems">home</div>
-               <div class="baritems">band</div>
-               <div class="baritems">tour</div>
-               <div class="baritems">contact</div>
+            <div id="bar-container">
+               <div class="baritems"><a href="">HOME</a></div>
+               <div class="baritems"><a href="">BAND</a></div>
+               <div class="baritems"><a href="">TOUR</a></div>
+               <div class="baritems"><a href="">CONTRACT</a></div>
             </div>
         </div>
         <div class="picture">
@@ -189,7 +208,7 @@
     </header>
 
 
-<section>
+    <section>
         <div id="main">
           <div id="title">
               THE BAND
@@ -227,19 +246,16 @@
           </div>
 
 
-    <footer id="footer-container">
-
-        <div id="footer1">
-          <div id="footericon">
-            <div class="icon">링크1</div>
-            <div class="icon">링크2</div>
-            <div class="icon">링크3</div>
-            <div class="icon">링크4</div>
-            <div class="icon">링크5</div>
+    <footer>
+          <div id="icon-container">
+            <a href=""><i class="icon-facebook"></i></a>
+            <a href=""><i class="icon-instagram"></i></a>
+            <a href=""><i class="icon-twitter"></i></a>
+            <a href=""><i class="icon-github"></i></a>
+            <a href=""><i class="icon-path"></i></a>
           </div>
-        </div>
-        <div id=footer2>
-          Today's coading
+        <div id=copyleft>
+          @COPYLEFT
           <br> Sunset
         </div>
     </footer>
